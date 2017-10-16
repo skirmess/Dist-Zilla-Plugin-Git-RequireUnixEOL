@@ -1,0 +1,6 @@
+*.bak
+*~
+.*.swp
+.build
+Dist-Zilla-Plugin-Git-RequireUnixEOL-*
+tmp
