@@ -2,4 +2,6 @@ Revision history for Dist-Zilla-Plugin-Git-RequireUnixEOL
 
 {{$NEXT}}
 
+0.001  2017-10-16 21:45:09 UTC
+
   - Initial release
