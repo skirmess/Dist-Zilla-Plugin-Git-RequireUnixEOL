@@ -50,5 +50,4 @@ resources:
   homepage: https://github.com/skirmess/Dist-Zilla-Plugin-Git-RequireUnixEOL
   repository: https://github.com/skirmess/Dist-Zilla-Plugin-Git-RequireUnixEOL.git
 version: '0.002'
-x_authority: cpan:SKIRMESS
 x_serialization_backend: 'YAML::Tiny version 1.70'
