@@ -6,7 +6,7 @@ Revision history for Dist-Zilla-Plugin-Git-RequireUnixEOL
 
   - No code changes
   - Distribution cleanup
-  - Bumped depenency on Moose to 2.1203
+  - Bumped dependency on Moose to 2.1203
 
 0.002  2017-10-21 05:45:10 UTC
 
