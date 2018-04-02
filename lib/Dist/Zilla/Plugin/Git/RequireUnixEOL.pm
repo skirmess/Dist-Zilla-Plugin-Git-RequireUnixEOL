@@ -4,7 +4,7 @@ use 5.006;
 use strict;
 use warnings;
 
-our $VERSION = '0.002';
+our $VERSION = '1.000';
 
 use Moose;
 
@@ -118,7 +118,7 @@ Dist::Zilla::Plugin::Git::RequireUnixEOL - Enforce the correct line endings in y
 
 =head1 VERSION
 
-Version 0.002
+Version 1.000
 
 =head1 SYNOPSIS
 
