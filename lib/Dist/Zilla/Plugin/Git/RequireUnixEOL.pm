@@ -130,7 +130,7 @@ Version 1.000
 This plugin checks that all the files in the Git repository where your
 project is saved use Unix line endings and have no whitespace at the end of
 a line. Files not in the Git index are ignored. You can ignore additional
-files with the B<ignore> option in F<dist.ini>.
+files with the C<ignore> option in F<dist.ini>.
 
 The plugin runs in the before build phase and aborts the build if a violation
 is found.
