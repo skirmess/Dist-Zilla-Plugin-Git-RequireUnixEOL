@@ -7,25 +7,7 @@ use warnings;
 our $VERSION = '1.000';
 
 use Moose;
-
-with qw(
-  Dist::Zilla::Role::BeforeBuild
-);
-
-has _git => (
-    is      => 'ro',
-    isa     => 'Git::Wrapper',
-    lazy    => 1,
-    default => sub { Git::Wrapper->new( path( shift->zilla->root )->absolute->stringify ) },
-);
-
-sub mvp_multivalue_args { return (qw( ignore )) }
-
-has ignore => (
-    is      => 'ro',
-    isa     => 'Maybe[ArrayRef]',
-    default => sub { [] },
-);
+with 'Dist::Zilla::Role::BeforeBuild';
 
 use Carp;
 use Git::Wrapper;
@@ -34,6 +16,21 @@ use Safe::Isa;
 use Try::Tiny;
 
 use namespace::autoclean;
+
+sub mvp_multivalue_args { return (qw( ignore )) }
+
+has _git => (
+    is      => 'ro',
+    isa     => 'Git::Wrapper',
+    lazy    => 1,
+    default => sub { Git::Wrapper->new( path( shift->zilla->root )->absolute->stringify ) },
+);
+
+has ignore => (
+    is      => 'ro',
+    isa     => 'Maybe[ArrayRef]',
+    default => sub { [] },
+);
 
 sub before_build {
     my ($self) = @_;
