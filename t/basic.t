@@ -17,7 +17,7 @@ sub main {
 
   SKIP:
     {
-        skip 'Cannot find Git in PATH' if !Git::Wrapper->has_git_in_path();
+        skip 'Cannot find Git in PATH', 1 if !Git::Wrapper->has_git_in_path();
 
         _test_with_unix_file();
         _test_with_windows_file();
