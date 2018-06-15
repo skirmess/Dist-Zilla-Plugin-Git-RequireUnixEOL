@@ -32,7 +32,7 @@ my %WriteMakefileArgs = (
     "Dist::Zilla::Plugin::Git::GatherDir" => 0,
     "Test::DZil" => 0,
     "Test::Fatal" => 0,
-    "Test::More" => 0,
+    "Test::More" => "0.88",
     "Test::TempDir::Tiny" => "0.017",
     "lib" => 0
   },
@@ -53,7 +53,7 @@ my %FallbackPrereqs = (
   "Safe::Isa" => 0,
   "Test::DZil" => 0,
   "Test::Fatal" => 0,
-  "Test::More" => 0,
+  "Test::More" => "0.88",
   "Test::TempDir::Tiny" => "0.017",
   "Try::Tiny" => 0,
   "lib" => 0,

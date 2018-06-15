@@ -19,7 +19,7 @@ on test => sub {
     requires 'Dist::Zilla::Plugin::Git::GatherDir';
     requires 'Test::DZil';
     requires 'Test::Fatal';
-    requires 'Test::More';
+    requires 'Test::More', '0.88';
     requires 'Test::TempDir::Tiny', '0.017';
     requires 'lib';
     requires 'perl', '5.006';
@@ -129,6 +129,7 @@ on develop => sub {
     requires 'Test::Pod::LinkCheck';
     requires 'Test::Pod::Links';
     requires 'Test::Portability::Files';
+    requires 'Test::RequiredMinimumDependencyVersion';
     requires 'Test::Spelling', '0.12';
     requires 'Test::Version', '0.04';
     requires 'lib';
