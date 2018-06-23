@@ -1,5 +1,5 @@
 ---
-abstract: 'Enforce the correct line endings in your Git repository with Dist::Zilla'
+abstract: 'enforce the correct line endings in your Git repository with Dist::Zilla'
 author:
   - 'Sven Kirmess <sven.kirmess@kzone.ch>'
 build_requires:

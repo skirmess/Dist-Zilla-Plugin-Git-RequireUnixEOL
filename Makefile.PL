@@ -7,7 +7,7 @@ use 5.006;
 use ExtUtils::MakeMaker;
 
 my %WriteMakefileArgs = (
-  "ABSTRACT" => "Enforce the correct line endings in your Git repository with Dist::Zilla",
+  "ABSTRACT" => "enforce the correct line endings in your Git repository with Dist::Zilla",
   "AUTHOR" => "Sven Kirmess <sven.kirmess\@kzone.ch>",
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0

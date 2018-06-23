@@ -111,7 +111,7 @@ __END__
 
 =head1 NAME
 
-Dist::Zilla::Plugin::Git::RequireUnixEOL - Enforce the correct line endings in your Git repository with Dist::Zilla
+Dist::Zilla::Plugin::Git::RequireUnixEOL - enforce the correct line endings in your Git repository with Dist::Zilla
 
 =head1 VERSION
 
