@@ -35,8 +35,8 @@ has ignore => (
 sub before_build {
     my ($self) = @_;
 
-    my %ignored_file = map { $_ => 1 } @{ $self->ignore };
-    my @files = grep { !exists $ignored_file{$_} } $self->_git_ls_files();
+    my %ignored_file = map  { $_ => 1 } @{ $self->ignore };
+    my @files        = grep { !exists $ignored_file{$_} } $self->_git_ls_files();
     return if !@files;
 
     my @errors;
@@ -161,7 +161,7 @@ Sven Kirmess <sven.kirmess@kzone.ch>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2017-2018 by Sven Kirmess.
+This software is Copyright (c) 2017-2019 by Sven Kirmess.
 
 This is free software, licensed under:
 

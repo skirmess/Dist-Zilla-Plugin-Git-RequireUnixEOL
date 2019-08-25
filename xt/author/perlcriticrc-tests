@@ -1,5 +1,5 @@
 [ControlStructures::ProhibitPostfixControls]
-flowcontrol = skip
+flowcontrol = die skip
 
 [-Modules::RequireExplicitInclusion]
 
