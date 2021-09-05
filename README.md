@@ -25,7 +25,7 @@ The plugin should ensure that you always commit your files with the correct
 line endings and without superfluous whitespace.
 
 This plugin checks the files in your repository. To check your build you can
-use a test based on [Test::EOL](https://metacpan.org/pod/Test::EOL).
+use a test based on [Test::EOL](https://metacpan.org/pod/Test%3A%3AEOL).
 
 # SUPPORT
 
@@ -58,5 +58,5 @@ This is free software, licensed under:
 
 # SEE ALSO
 
-[Dist::Zilla::Plugin::Git::FilePermissions](https://metacpan.org/pod/Dist::Zilla::Plugin::Git::FilePermissions),
-[Test::EOL](https://metacpan.org/pod/Test::EOL)
+[Dist::Zilla::Plugin::Git::FilePermissions](https://metacpan.org/pod/Dist%3A%3AZilla%3A%3APlugin%3A%3AGit%3A%3AFilePermissions),
+[Test::EOL](https://metacpan.org/pod/Test%3A%3AEOL)
