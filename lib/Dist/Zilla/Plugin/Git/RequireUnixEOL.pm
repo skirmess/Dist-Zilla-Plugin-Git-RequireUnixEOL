@@ -10,10 +10,8 @@ use Moose;
 with 'Dist::Zilla::Role::BeforeBuild';
 
 use Carp;
-use Git::Wrapper;
+use Git::Background 0.003;
 use Path::Tiny;
-use Safe::Isa;
-use Try::Tiny;
 
 use namespace::autoclean;
 
@@ -21,9 +19,9 @@ sub mvp_multivalue_args { return (qw( ignore )) }
 
 has _git => (
     is      => 'ro',
-    isa     => 'Git::Wrapper',
+    isa     => 'Git::Background',
     lazy    => 1,
-    default => sub { Git::Wrapper->new( path( shift->zilla->root )->absolute->stringify ) },
+    default => sub { Git::Background->new( path( shift->zilla->root )->absolute ) },
 );
 
 has ignore => (
@@ -78,24 +76,11 @@ sub _git_ls_files {
 
     my $git = $self->_git;
 
-    my @files;
-    try {
-        @files = $git->ls_files();
-    }
-    catch {
-        my $fatal = $_;
-        if ( $fatal->$_isa('Git::Wrapper::Exception') ) {
-            my $err = $git->ERR;
-            if ( $err and @{$err} ) {
-                $self->log( @{$err} );
-            }
+    my $files_f = $git->run('ls-files')->await;
 
-            $self->log_fatal( $fatal->error );
-        }
+    $self->log_fatal( scalar $files_f->failure ) if $files_f->is_failed;
 
-        $self->log_fatal($fatal);
-    };
-
+    my @files = $files_f->stdout;
     return @files;
 }
 
