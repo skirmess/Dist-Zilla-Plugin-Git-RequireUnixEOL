@@ -4,7 +4,7 @@ Dist::Zilla::Plugin::Git::RequireUnixEOL - enforce the correct line endings in y
 
 # VERSION
 
-Version 1.000
+Version 1.001
 
 # SYNOPSIS
 

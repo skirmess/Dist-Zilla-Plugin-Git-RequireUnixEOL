@@ -43,5 +43,5 @@ resources:
   bugtracker: https://github.com/skirmess/Dist-Zilla-Plugin-Git-RequireUnixEOL/issues
   homepage: https://github.com/skirmess/Dist-Zilla-Plugin-Git-RequireUnixEOL
   repository: https://github.com/skirmess/Dist-Zilla-Plugin-Git-RequireUnixEOL.git
-version: '1.000'
+version: '1.001'
 x_spdx_expression: BSD-2-Clause-FreeBSD
